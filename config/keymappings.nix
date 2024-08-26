@@ -50,6 +50,53 @@
       options = { remap = false; };
     }
 
+    # Change windows with correct homerow
+    {
+      mode = ["n"];
+      key = "<C-w>m";
+      action = "<C-w>h";
+      options = { remap = false; desc = "Go to the left window";};
+    }
+    {
+      mode = ["n"];
+      key = "<C-w>n";
+      action = "<C-w>j";
+      options = { remap = false; desc = "Go to the down window";};
+    }
+    {
+      mode = ["n"];
+      key = "<C-w>e";
+      action = "<C-w>k";
+      options = { remap = false; desc = "Go to the up window";};
+    }
+    {
+      mode = ["n"];
+      key = "<C-w>i";
+      action = "<C-w>l";
+      options = { remap = false; desc = "Go to the right window"; };
+    }
+    {
+      mode = ["n"];
+      key = "<C-w>h";
+      action = "<Nop>";
+    }
+    {
+      mode = ["n"];
+      key = "<C-w>j";
+      action = "<Nop>";
+    }
+    {
+      mode = ["n"];
+      key = "<C-w>k";
+      action = "<Nop>";
+    }
+    {
+      mode = ["n"];
+      key = "<C-w>l";
+      action = "<Nop>";
+    }
+
+    # misc
     {
       mode = ["n" "v"];
       key = "gl";

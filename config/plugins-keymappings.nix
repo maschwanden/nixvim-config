@@ -36,27 +36,23 @@
 
     {
       action = "<cmd>Telescope live_grep<CR>";
-      key = "<leader>fw";
+      key = "<leader>tg";
     }
     {
       action = "<cmd>Telescope find_files<CR>";
-      key = "<leader>ff";
+      key = "<leader>tf";
     }
     {
       action = "<cmd>Telescope git_commits<CR>";
-      key = "<leader>fg";
+      key = "<leader>tc";
     }
     {
       action = "<cmd>Telescope oldfiles<CR>";
-      key = "<leader>fh";
+      key = "<leader>th";
     }
     {
       action = "<cmd>Telescope colorscheme<CR>";
       key = "<leader>ch";
-    }
-    {
-      action = "<cmd>Telescope man_pages<CR>";
-      key = "<leader>fm";
     }
 
     # Notify bindings
@@ -151,7 +147,6 @@
         desc = "Next Mark";
       };
     }
-
     {
       mode = "n";
       key = "<leader>me";
