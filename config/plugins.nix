@@ -600,7 +600,15 @@
   --       return vim_item
   --      end
   -- }
-       })  '';
+
+     })  
+
+     require("elixir").setup({
+       nextls = {enable = false},
+       elixirls = {enable = true},
+       projectionist = {enable = true},
+     })
+     '';
 
   colorschemes.catppuccin = {
     enable = true;
@@ -648,6 +656,7 @@
       glow-nvim # Glow inside of Neovim
       ultisnips
       clipboard-image-nvim
+      elixir-tools-nvim
     ]
     ++ [
       (pkgs.vimUtils.buildVimPlugin {
