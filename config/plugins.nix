@@ -18,6 +18,10 @@
     # Includes all parsers for treesitter
     treesitter = {
       enable = true;
+      settings = {
+        ensure_installed = [ "elixir" "eex" "heex" ];
+        highlight.enable = true; 
+      };
     };
 
     # Auto-tagging
