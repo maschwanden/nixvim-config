@@ -28,7 +28,7 @@
       enable = true;
       settings = {
         ensure_installed = [ "elixir" "eex" "heex" ];
-        highlight.enable = true; 
+        highlight.enable = true;
       };
     };
 
@@ -389,7 +389,7 @@
       Event = "",
       Operator = "",
       TypeParameter = "",
-    } 
+    }
 
     local cmp = require'cmp'
 
@@ -416,7 +416,7 @@
        }, {
          { name = 'cmdline' }
        }),
-     })  
+     })
 
      require("elixir").setup({
        nextls = {enable = false},

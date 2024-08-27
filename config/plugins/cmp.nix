@@ -22,7 +22,7 @@
 
     cmp-cmdline = {
       enable = true; # autocomplete for cmdline
-    }; 
+    };
 
     cmp = {
       enable = true;

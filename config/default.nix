@@ -3,6 +3,7 @@
   imports = [
     ./options.nix
     ./keymappings.nix
+    ./autocommands.nix
 
     ./plugins
     # ./plugins/flash.nix
