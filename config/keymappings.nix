@@ -103,6 +103,12 @@
       action = "function() vim diagnostic.open_float() end";
       options = { expr = true; remap = false; };
     }
+    {
+      mode = ["n" "v"];
+      key = "<C-l>";
+      action = "<C-d>";
+      options = { remap = false; };
+    }
   ];
 }
 
