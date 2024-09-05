@@ -19,13 +19,16 @@
       autoExpandWidth = false;
       mappings = {
         "<space>" = "none";
+        "n" = "move_cursor_down";
+        "e" = "move_cursor_up";
       };
     };
   };
   keymaps = [
     {
-      action = "<cmd>Neotree toggle<CR>";
+      action = "<cmd>Neotree focus<CR>";
       key = "<leader>e";
     }
+
   ];
 }
