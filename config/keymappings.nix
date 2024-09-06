@@ -100,7 +100,7 @@
     {
       mode = ["n" "v"];
       key = "gl";
-      action = "function() vim diagnostic.open_float() end";
+      action = "<cmd>lua vim.diagnostic.open_float()<CR>";
       options = { expr = true; remap = false; };
     }
     {
