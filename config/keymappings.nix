@@ -109,5 +109,12 @@
       action = "<C-d>";
       options = { remap = false; };
     }
+    # Replace word under cursor and all other occurences of the word
+    {
+      mode = ["n"];
+      key = "<leader>s";
+      action = ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>";
+      options = { remap = false; };
+    }
   ];
 }
