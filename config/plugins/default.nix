@@ -532,7 +532,7 @@
 
     {
       action = "<cmd>Telescope live_grep<CR>";
-      key = "<leader>tg";
+      key = "<leader>ts";
     }
     {
       action = "<cmd>Telescope find_files<CR>";
@@ -586,7 +586,7 @@
 
     {
       mode = "n";
-      key = "<S-l>";
+      key = "<S-n>";
       action = "<cmd>BufferLineCycleNext<cr>";
       options = {
         desc = "Cycle to next buffer";
@@ -595,7 +595,7 @@
 
     {
       mode = "n";
-      key = "<S-h>";
+      key = "<S-e>";
       action = "<cmd>BufferLineCyclePrev<cr>";
       options = {
         desc = "Cycle to previous buffer";
