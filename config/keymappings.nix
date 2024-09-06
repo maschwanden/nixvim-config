@@ -101,7 +101,10 @@
       mode = ["n" "v"];
       key = "gl";
       action = "<cmd>lua vim.diagnostic.open_float()<CR>";
-      options = { expr = true; remap = false; };
+      options = {
+        desc = "Open diagnostic in a floating window";
+        silent = true;
+      };
     }
     {
       mode = ["n" "v"];

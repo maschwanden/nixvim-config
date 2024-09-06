@@ -6,8 +6,5 @@
     ./autocommands.nix
 
     ./plugins
-    # ./plugins/flash.nix
-    # ./plugins/cmp.nix
-    # ./plugins/cmp.nix
   ];
 }
