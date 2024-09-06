@@ -116,5 +116,12 @@
       action = ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>";
       options = { remap = false; };
     }
+    # Jump to the last opened/focused file
+    {
+      mode = ["n"];
+      key = ",,";
+      action = "<c-^>";
+      options = { remap = false; };
+    }
   ];
 }
