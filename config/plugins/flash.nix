@@ -33,9 +33,7 @@
     }
 
     {
-      mode = [
-        "c"
-      ];
+      mode = "n";
       key = "S";
       action = "<cmd>lua require('flash').treesitter()<cr>";
       options = {

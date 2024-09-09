@@ -5,6 +5,7 @@
     ./flash.nix
     ./harpoon.nix
     ./neotree.nix
+    ./lsp.nix
   ];
 
   plugins = {
@@ -281,42 +282,6 @@
     # Nix expressions in Neovim
     nix = {
       enable = true;
-    };
-
-    # Language server
-    lsp = {
-      enable = true;
-      servers = {
-        # Average webdev LSPs
-        tsserver.enable = true; # TS/JS
-        cssls.enable = true; # CSS
-        tailwindcss.enable = true; # TailwindCSS
-        html.enable = true; # HTML
-        astro.enable = true; # AstroJS
-        phpactor.enable = true; # PHP
-        svelte.enable = false; # Svelte
-        vuels.enable = false; # Vue
-        pyright.enable = true; # Python
-        marksman.enable = true; # Markdown
-        nil-ls.enable = true; # Nix
-        dockerls.enable = true; # Docker
-        bashls.enable = true; # Bash
-        clangd.enable = true; # C/C++
-        csharp-ls.enable = true; # C#
-        yamlls.enable = true; # YAML
-
-        lua-ls = { # Lua
-          enable = true;
-          settings.telemetry.enable = false;
-        };
-
-        # Rust
-        rust-analyzer = {
-          enable = true;
-          installRustc = true;
-          installCargo = true;
-        };
-      };
     };
 
     # Dashboard
