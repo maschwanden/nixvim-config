@@ -6,6 +6,7 @@
     ./harpoon.nix
     ./neotree.nix
     ./lsp.nix
+    ./conform.nix
   ];
 
   plugins = {
