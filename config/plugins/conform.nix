@@ -12,7 +12,7 @@
       formatters_by_ft = {
         "_" = ["trim_whitespace"];
         "*" = ["codespell"];
-        go = ["goimports" "golines" "gofmt" "gofumpt"];
+        go = ["goimports" "gofumpt"];
         javascript = [["prettierd" "prettier"]];
         json = ["jq"];
         lua = ["stylua"];

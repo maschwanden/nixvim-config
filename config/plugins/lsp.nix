@@ -21,7 +21,8 @@
       yamlls.enable = true; # YAML
       gopls.enable = true; # Golang
 
-      lua-ls = { # Lua
+      lua-ls = {
+        # Lua
         enable = true;
         settings.telemetry.enable = false;
       };
@@ -48,12 +49,11 @@
         "<F2>" = "rename";
         la = "code_action";
         ld = "definition";
-        li ="implementation";
+        li = "implementation";
         lr = "references";
         lh = "hover";
         lt = "type_definition";
       };
     };
   };
-
 }

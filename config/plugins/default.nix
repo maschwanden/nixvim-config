@@ -29,7 +29,7 @@
     treesitter = {
       enable = true;
       settings = {
-        ensure_installed = [ "elixir" "eex" "heex" ];
+        ensure_installed = ["elixir" "eex" "heex"];
         highlight.enable = true;
       };
     };
@@ -78,7 +78,6 @@
                 extra_args = { "--fast" },
               }
             '';
-
           };
         };
         completion = {
@@ -261,22 +260,22 @@
       enable = true;
       enabled = true;
       disableMouse = true;
-      disabledFiletypes = [ "Oil" ];
+      disabledFiletypes = ["Oil"];
       hint = true;
       maxCount = 4;
       maxTime = 1000;
       restrictionMode = "hint";
       restrictedKeys = {
-        "m" = [ "n" "v" "x" ];
-        "n" = [ "n" "v" "x" ];
-        "e" = [ "n" "v" "x" ];
-        "i" = [ "n" "v" "x" ];
-        "-" = [ "n" "x" ];
-        "+" = [ "n" "x" ];
-        "<CR>" = [ "n" "x" ];
-        "<C-M>" = [ "n" "x" ];
-        "<C-N>" = [ "n" "x" ];
-        "<C-P>" = [ "n" "x" ];
+        "m" = ["n" "v" "x"];
+        "n" = ["n" "v" "x"];
+        "e" = ["n" "v" "x"];
+        "i" = ["n" "v" "x"];
+        "-" = ["n" "x"];
+        "+" = ["n" "x"];
+        "<CR>" = ["n" "x"];
+        "<C-M>" = ["n" "x"];
+        "<C-N>" = ["n" "x"];
+        "<C-P>" = ["n" "x"];
       };
     };
 
@@ -312,8 +311,6 @@
       yaml.enable = true;
       json.enable = false;
     };
-
-
   };
   extraConfigLua = ''
     require("telescope").load_extension("lazygit")
@@ -379,7 +376,7 @@
        elixirls = {enable = true},
        projectionist = {enable = true},
      })
-     '';
+  '';
 
   colorschemes.catppuccin = {
     enable = true;
@@ -425,15 +422,15 @@
     ]
     ++ [
       (pkgs.vimUtils.buildVimPlugin {
-      pname = "markview.nvim";
-      version = "0.0.1";
-      src = pkgs.fetchFromGitHub {
-        owner = "OXY2DEV";
-        repo = "markview.nvim";
-        rev = "a959d77ca7e9f05175e3ee4e582db40b338c9164";
-        hash = "sha256-w6yn8aNcJMLRbzaRuj3gj4x2J/20wUROLM6j39wpZek=";
-      };
-    })
+        pname = "markview.nvim";
+        version = "0.0.1";
+        src = pkgs.fetchFromGitHub {
+          owner = "OXY2DEV";
+          repo = "markview.nvim";
+          rev = "a959d77ca7e9f05175e3ee4e582db40b338c9164";
+          hash = "sha256-w6yn8aNcJMLRbzaRuj3gj4x2J/20wUROLM6j39wpZek=";
+        };
+      })
       # (pkgs.vimUtils.buildVimPlugin {
       #   pname = "accelerated-jk";
       #   src = pkgs.fetchFromGitHub {
@@ -567,5 +564,13 @@
       };
     }
 
+    {
+      mode = "n";
+      key = "<leader>xx";
+      action = "<cmd>Trouble diagnostics<cr>";
+      options = {
+        desc = "Delete buffer";
+      };
+    }
   ];
 }
