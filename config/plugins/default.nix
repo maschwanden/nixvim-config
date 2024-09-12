@@ -10,6 +10,10 @@
   ];
 
   plugins = {
+    diffview = {
+      enable = true;
+    };
+
     # Buffer bar
     bufferline = {
       enable = true;
