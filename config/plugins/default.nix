@@ -197,9 +197,11 @@
     which-key = {
       enable = true;
       registrations = {
-        "<leader>fg" = "Find Git files with telescope";
-        "<leader>fw" = "Find text with telescope";
-        "<leader>ff" = "Find files with telescope";
+        "<leader>ts" = "Live grep with telescope";
+        "<leader>tc" = "Search git commits with telescope";
+        "<leader>tf" = "Search files with telescope";
+        "<leader>th" = "Search recently opened files with telescope";
+        "<leader>ch" = "Search and change colorscheme with telescope";
       };
     };
 
