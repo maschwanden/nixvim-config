@@ -157,6 +157,7 @@
         clojure = ["clj-kondo"];
         dockerfile = ["hadolint"];
         terraform = ["tflint"];
+        credo = ["elixir"];
       };
     };
 
@@ -229,13 +230,15 @@
     # Todo comments
     todo-comments = {
       enable = true;
-      colors = {
-        error = ["DiagnosticError" "ErrorMsg" "#DC2626"];
-        warning = ["DiagnosticWarn" "WarningMsg" "#FBBF24"];
-        info = ["DiagnosticInfo" "#2563EB"];
-        hint = ["DiagnosticHint" "#10B981"];
-        default = ["Identifier" "#7C3AED"];
-        test = ["Identifier" "#FF00FF"];
+      settings = {
+        colors = {
+          error = ["DiagnosticError" "ErrorMsg" "#DC2626"];
+          warning = ["DiagnosticWarn" "WarningMsg" "#FBBF24"];
+          info = ["DiagnosticInfo" "#2563EB"];
+          hint = ["DiagnosticHint" "#10B981"];
+          default = ["Identifier" "#7C3AED"];
+          test = ["Identifier" "#FF00FF"];
+        };
       };
     };
 
@@ -264,24 +267,25 @@
 
     hardtime = {
       enable = true;
-      enabled = true;
-      disableMouse = true;
-      disabledFiletypes = ["Oil"];
-      hint = true;
-      maxCount = 4;
-      maxTime = 1000;
-      restrictionMode = "hint";
-      restrictedKeys = {
-        "m" = ["n" "v" "x"];
-        "n" = ["n" "v" "x"];
-        "e" = ["n" "v" "x"];
-        "i" = ["n" "v" "x"];
-        "-" = ["n" "x"];
-        "+" = ["n" "x"];
-        "<CR>" = ["n" "x"];
-        "<C-M>" = ["n" "x"];
-        "<C-N>" = ["n" "x"];
-        "<C-P>" = ["n" "x"];
+      settings = {
+        disable_mouse = true;
+        disabled_filetypes = ["Oil"];
+        hint = true;
+        max_count = 4;
+        max_time = 1000;
+        restriction_mode = "hint";
+        restricted_keys = {
+          "m" = ["n" "v" "x"];
+          "n" = ["n" "v" "x"];
+          "e" = ["n" "v" "x"];
+          "i" = ["n" "v" "x"];
+          "-" = ["n" "x"];
+          "+" = ["n" "x"];
+          "<CR>" = ["n" "x"];
+          "<C-M>" = ["n" "x"];
+          "<C-N>" = ["n" "x"];
+          "<C-P>" = ["n" "x"];
+        };
       };
     };
 
@@ -294,7 +298,6 @@
     alpha = {
       enable = true;
       theme = "dashboard";
-      iconsEnabled = true;
     };
 
     # flash = {
