@@ -156,7 +156,6 @@
         inko = ["inko"];
         clojure = ["clj-kondo"];
         dockerfile = ["hadolint"];
-        terraform = ["tflint"];
         credo = ["elixir"];
       };
     };

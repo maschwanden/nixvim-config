@@ -20,7 +20,6 @@
         python = ["isort" "black"];
         rust = ["rustfmt"];
         sh = ["shfmt"];
-        terraform = ["terraform_fmt"];
       };
 
       format_on_save = ''
