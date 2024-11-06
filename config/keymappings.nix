@@ -5,49 +5,49 @@
       mode = ["n" "v"];
       key = "n";
       action = "gj";
-      options = { remap = false; };
+      options = {remap = false;};
     }
     {
       mode = ["n" "v"];
       key = "e";
       action = "gk";
-      options = { remap = false; };
+      options = {remap = false;};
     }
     {
       mode = ["n" "v"];
       key = "m";
       action = "h";
-      options = { remap = false; };
+      options = {remap = false;};
     }
     {
       mode = ["n" "v"];
       key = "i";
       action = "l";
-      options = { remap = false; };
+      options = {remap = false;};
     }
     {
       mode = ["n" "v"];
       key = "k";
       action = "n";
-      options = { remap = false; };
+      options = {remap = false;};
     }
     {
       mode = ["n" "v"];
       key = "K";
       action = "N";
-      options = { remap = false; };
+      options = {remap = false;};
     }
     {
       mode = ["n" "v"];
       key = "h";
       action = "i";
-      options = { remap = false; };
+      options = {remap = false;};
     }
     {
       mode = ["n" "v"];
       key = "H";
       action = "I";
-      options = { remap = false; };
+      options = {remap = false;};
     }
 
     # Change windows with correct homerow
@@ -55,25 +55,37 @@
       mode = ["n"];
       key = "<C-w>m";
       action = "<C-w>h";
-      options = { remap = false; desc = "Go to the left window";};
+      options = {
+        remap = false;
+        desc = "Go to the left window";
+      };
     }
     {
       mode = ["n"];
       key = "<C-w>n";
       action = "<C-w>j";
-      options = { remap = false; desc = "Go to the down window";};
+      options = {
+        remap = false;
+        desc = "Go to the down window";
+      };
     }
     {
       mode = ["n"];
       key = "<C-w>e";
       action = "<C-w>k";
-      options = { remap = false; desc = "Go to the up window";};
+      options = {
+        remap = false;
+        desc = "Go to the up window";
+      };
     }
     {
       mode = ["n"];
       key = "<C-w>i";
       action = "<C-w>l";
-      options = { remap = false; desc = "Go to the right window"; };
+      options = {
+        remap = false;
+        desc = "Go to the right window";
+      };
     }
     {
       mode = ["n"];
@@ -108,23 +120,29 @@
     }
     {
       mode = ["n" "v"];
-      key = "<C-l>";
+      key = "<C-n>";
       action = "<C-d>";
-      options = { remap = false; };
+      options = {remap = false;};
+    }
+    {
+      mode = ["n" "v"];
+      key = "<C-e>";
+      action = "<C-u>";
+      options = {remap = false;};
     }
     # Replace word under cursor and all other occurences of the word
     {
       mode = ["n"];
       key = "<leader>s";
       action = ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>";
-      options = { remap = false; };
+      options = {remap = false;};
     }
     # Jump to the last opened/focused file
     {
       mode = ["n"];
       key = ",,";
       action = "<c-^>";
-      options = { remap = false; };
+      options = {remap = false;};
     }
   ];
 }
