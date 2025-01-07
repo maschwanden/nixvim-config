@@ -38,16 +38,6 @@
       };
     };
 
-    # Auto-tagging
-    ts-autotag = {
-      enable = true;
-    };
-
-    # Autopairs
-    nvim-autopairs = {
-      enable = true;
-    };
-
     none-ls = {
       enable = true;
       settings = {
@@ -89,11 +79,6 @@
           spell.enable = true;
         };
       };
-    };
-
-    # Lazygit
-    lazygit = {
-      enable = true;
     };
 
     # Persistence
@@ -168,53 +153,10 @@
     # Code snippets
     luasnip = {
       enable = true;
-      #extraConfig = {
-      #  enable_autosnippets = true;
-      #  store_selection_keys = "<Tab>";
-      #};
     };
 
     # Easily toggle comments
     commentary.enable = true;
-
-    # Terminal inside Neovim
-    toggleterm = {
-      enable = true;
-      settings = {
-        hide_numbers = false;
-        autochdir = true;
-        close_on_exit = true;
-        direction = "vertical";
-      };
-    };
-
-    # Git signs in code
-    gitsigns = {
-      enable = true;
-      settings.current_line_blame = true;
-    };
-
-    which-key = {
-      enable = true;
-      registrations = {
-        "<leader>ts" = "Live grep with telescope";
-        "<leader>tc" = "Search git commits with telescope";
-        "<leader>tf" = "Search files with telescope";
-        "<leader>th" = "Search recently opened files with telescope";
-        "<leader>ch" = "Search and change colorscheme with telescope";
-      };
-    };
-
-    # Markdown preview server
-    markdown-preview = {
-      enable = true;
-      settings.theme = "dark";
-    };
-
-    # Prettier fancier command window
-    noice = {
-      enable = true;
-    };
 
     # Good old Telescope
     telescope = {
@@ -241,20 +183,10 @@
       };
     };
 
-    # File tree
-
-    undotree = {
-      enable = true;
-      settings = {
-        autoOpenDiff = true;
-        focusOnToggle = true;
-      };
-    };
-
     # Highlight word under cursor
     illuminate = {
       enable = true;
-      underCursor = false;
+      underCursor = true;
       filetypesDenylist = [
         "Outline"
         "TelescopePrompt"
@@ -262,30 +194,6 @@
         "harpoon"
         "reason"
       ];
-    };
-
-    hardtime = {
-      enable = true;
-      settings = {
-        disable_mouse = true;
-        disabled_filetypes = ["Oil"];
-        hint = true;
-        max_count = 4;
-        max_time = 1000;
-        restriction_mode = "hint";
-        restricted_keys = {
-          "m" = ["n" "v" "x"];
-          "n" = ["n" "v" "x"];
-          "e" = ["n" "v" "x"];
-          "i" = ["n" "v" "x"];
-          "-" = ["n" "x"];
-          "+" = ["n" "x"];
-          "<CR>" = ["n" "x"];
-          "<C-M>" = ["n" "x"];
-          "<C-N>" = ["n" "x"];
-          "<C-P>" = ["n" "x"];
-        };
-      };
     };
 
     # Nix expressions in Neovim
@@ -296,12 +204,8 @@
     # Dashboard
     alpha = {
       enable = true;
-      theme = "dashboard";
+      theme = "startify";
     };
-
-    # flash = {
-    #   enable = true;
-    # };
 
     lspkind = {
       enable = true;
@@ -313,15 +217,9 @@
         ellipsis_char = "...";
       };
     };
-
-    schemastore = {
-      enable = true;
-      yaml.enable = true;
-      json.enable = false;
-    };
   };
   extraConfigLua = ''
-    require("telescope").load_extension("lazygit")
+    require("telescope")
 
     luasnip = require("luasnip")
     kind_icons = {
@@ -439,50 +337,9 @@
       #       hash = "sha256-w6yn8aNcJMLRbzaRuj3gj4x2J/20wUROLM6j39wpZek=";
       #     };
       #   })
-      # (pkgs.vimUtils.buildVimPlugin {
-      #   pname = "accelerated-jk";
-      #   src = pkgs.fetchFromGitHub {
-      #     owner = "rainbowhxch";
-      #     repo = "accelerated-jk.nvim";
-      #     rev = "8fb5dad4ccc1811766cebf16b544038aeeb7806f";
-      #     sha256 = "";
-      #   };
-      #   version = "2023-03-01";
-      # })
-
-      # Just copy this block for a new plugin
-      # (pkgs.vimUtils.buildVimPlugin {
-      #   pname = "";
-      #   src = pkgs.fetchFromGitHub {
-      #     owner = "";
-      #     repo = "";
-      #     rev = "";
-      #     sha256 = "";
-      #   };
-      # })
     ];
 
   keymaps = [
-    # Undotree
-    {
-      mode = "n";
-      key = "<leader>ut";
-      action = "<cmd>UndotreeToggle<CR>";
-      options = {
-        desc = "Undotree";
-      };
-    }
-
-    # Lazygit
-    {
-      mode = "n";
-      key = "<leader>gg";
-      action = "<cmd>LazyGit<CR>";
-      options = {
-        desc = "LazyGit (root dir)";
-      };
-    }
-
     # Commentary bindings
     {
       action = "<cmd>Commentary<CR>";
@@ -512,21 +369,7 @@
       key = "<leader>ch";
     }
 
-    # Notify bindings
-
-    {
-      mode = "n";
-      key = "<leader>un";
-      action = ''
-        <cmd>lua require("notify").dismiss({ silent = true, pending = true })<cr>
-      '';
-      options = {
-        desc = "Dismiss All Notifications";
-      };
-    }
-
     # Bufferline bindings
-
     {
       mode = "n";
       key = "<Tab>";

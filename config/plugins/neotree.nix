@@ -29,6 +29,5 @@
       action = "<cmd>Neotree focus<CR>";
       key = "<leader>e";
     }
-
   ];
 }

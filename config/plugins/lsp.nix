@@ -9,8 +9,6 @@
       html.enable = true; # HTML
       astro.enable = true; # AstroJS
       phpactor.enable = true; # PHP
-      svelte.enable = false; # Svelte
-      vuels.enable = false; # Vue
       pyright.enable = true; # Python
       marksman.enable = true; # Markdown
       nil-ls.enable = true; # Nix
