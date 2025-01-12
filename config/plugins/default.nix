@@ -7,6 +7,7 @@
     ./neotree.nix
     ./lsp.nix
     ./conform.nix
+    ./treesitter.nix
   ];
 
   plugins = {
@@ -27,15 +28,6 @@
     # Make `nvim .` look prettier
     oil = {
       enable = true;
-    };
-
-    # Includes all parsers for treesitter
-    treesitter = {
-      enable = true;
-      settings = {
-        ensure_installed = ["elixir" "eex" "heex"];
-        highlight.enable = true;
-      };
     };
 
     none-ls = {
