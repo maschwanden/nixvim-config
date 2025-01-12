@@ -350,6 +350,10 @@
       key = "<leader>th";
     }
     {
+      action = "<cmd>Telescope buffers<CR>";
+      key = "<leader>tb";
+    }
+    {
       action = "<cmd>Telescope colorscheme<CR>";
       key = "<leader>ch";
     }
