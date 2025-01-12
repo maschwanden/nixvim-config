@@ -1,4 +1,4 @@
-{self, ...}: {
+{
   keymaps = [
     # Basic mappings: "hjkl movements", insert, search, ...
     {

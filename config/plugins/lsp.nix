@@ -18,7 +18,6 @@
       csharp-ls.enable = true; # C#
       yamlls.enable = true; # YAML
       gopls.enable = true; # Golang
-      elixirls.enable = true; # Elixir
 
       lua-ls = {
         # Lua

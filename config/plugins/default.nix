@@ -76,7 +76,6 @@
         };
         completion = {
           luasnip.enable = true;
-          spell.enable = true;
         };
       };
     };
@@ -141,7 +140,6 @@
         inko = ["inko"];
         clojure = ["clj-kondo"];
         dockerfile = ["hadolint"];
-        credo = ["elixir"];
       };
     };
 
@@ -277,11 +275,6 @@
        }),
      })
 
-     require("elixir").setup({
-       nextls = {enable = false},
-       elixirls = {enable = true},
-       projectionist = {enable = true},
-     })
   '';
 
   colorschemes.catppuccin = {
@@ -323,7 +316,6 @@
 
   extraPlugins = with pkgs.vimPlugins; [
     # headlines-nvim # Should load this in at the opening of filetypes that require this, namely Markdown.
-    elixir-tools-nvim
   ];
   # ++ [
   #   (pkgs.vimUtils.buildVimPlugin {

@@ -1,4 +1,4 @@
-{self, ...}: {
+{
   globalOpts = {
     # Line numbers
     number = true;
@@ -59,9 +59,11 @@
   # ];
 
   highlight = {
-    Comment.fg = "#ff00ff";
-    Comment.bg = "#000000";
-    Comment.underline = true;
-    Comment.bold = true;
+    Comment = {
+      fg = "#ff00ff";
+      bg = "#000000";
+      underline = true;
+      bold = true;
+    };
   };
 }
