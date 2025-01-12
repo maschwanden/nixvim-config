@@ -8,6 +8,8 @@
     ./lsp.nix
     ./conform.nix
     ./treesitter.nix
+    ./copilot-chat.nix
+    ./copilot-cmp.nix
   ];
 
   plugins = {
