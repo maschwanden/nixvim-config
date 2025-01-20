@@ -144,5 +144,11 @@
       action = "<c-^>";
       options = {remap = false;};
     }
+    {
+      mode = ["n"];
+      key = "j";
+      action = "m";
+      options = {remap = false;};
+    }
   ];
 }
