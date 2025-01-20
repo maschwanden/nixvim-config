@@ -130,10 +130,10 @@
       action = "<C-u>";
       options = {remap = false;};
     }
-    # Replace word under cursor and all other occurences of the word
+    # Replace word under cursor and all other occurrences of the word
     {
       mode = ["n"];
-      key = "<C-r>";
+      key = "<leader>r";
       action = ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>";
       options = {remap = false;};
     }
