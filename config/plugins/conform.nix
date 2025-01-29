@@ -4,14 +4,14 @@
 
     settings = {
       formatters = {
-        codespell = {
-          prepend_args = ["-L" "crate"];
-        };
+        # codespell = {
+        #   prepend_args = ["-L" "crate"];
+        # };
       };
 
       formatters_by_ft = {
         "_" = ["trim_whitespace"];
-        "*" = ["codespell"];
+        # "*" = ["codespell"];
         go = ["goimports" "gofumpt"];
         javascript = [["prettierd" "prettier"]];
         json = ["jq"];
