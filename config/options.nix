@@ -10,6 +10,7 @@
     # Search
     ignorecase = true;
     smartcase = true;
+    wrapscan = false; # Do not wrap at start/end of file.
 
     # Tab defaults (might get overwritten by an LSP server)
     tabstop = 4;
