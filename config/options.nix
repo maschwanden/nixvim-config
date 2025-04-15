@@ -74,4 +74,20 @@
       bold = true;
     };
   };
+
+  withPython3 = true;
+  extraPython3Packages = ps:
+    with ps; [
+      pynvim
+      pip
+      numpy
+      scipy
+      pandas
+      matplotlib
+      seaborn
+      jupyter
+    ];
+
+  extraConfigLua = ''
+  '';
 }
