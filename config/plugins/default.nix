@@ -13,6 +13,10 @@
   ];
 
   plugins = {
+    web-devicons = {
+      enable = true;
+    };
+
     diffview = {
       enable = true;
     };
