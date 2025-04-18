@@ -7,6 +7,6 @@
     pkgs.prettierd
     pkgs.jq
     pkgs.rustfmt
-    # pkgs.codespell
+    pkgs.nodePackages_latest.nodejs
   ];
 }
