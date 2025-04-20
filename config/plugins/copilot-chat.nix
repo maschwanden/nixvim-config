@@ -5,7 +5,7 @@
 
   keymaps = [
     {
-      key = "<leader>ct";
+      key = "<leader>cc";
       action = "<CMD>CopilotChatToggle<CR>";
       options.desc = "Toggle Copilot Chat Window";
     }
