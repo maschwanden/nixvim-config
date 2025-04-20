@@ -58,6 +58,7 @@
           stylua.enable = true;
           shfmt.enable = true;
           nixpkgs_fmt.enable = true;
+          gofumpt.enable = true;
           google_java_format.enable = false;
           prettier = {
             enable = true;
