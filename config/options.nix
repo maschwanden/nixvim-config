@@ -88,9 +88,9 @@
       jupyter
     ];
 
-  # env = {
-  #   # GOFUMPT_SPLIT_LONG_LINES = "on";
-  # };
+  env = {
+    GOFUMPT_SPLIT_LONG_LINES = "on";
+  };
 
   extraConfigLua = ''
   '';
