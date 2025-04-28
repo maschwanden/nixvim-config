@@ -9,7 +9,7 @@
     ./conform.nix
     ./treesitter.nix
     ./copilot-chat.nix
-    ./copilot-cmp.nix
+    ./copilot.nix
   ];
 
   plugins = {
