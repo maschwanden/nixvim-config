@@ -150,5 +150,39 @@
       action = "m";
       options = {remap = false;};
     }
+
+    #########
+    # Harpoon
+    #########
+    {
+      mode = "n";
+      key = "<C-m>";
+      action.__raw = "function() require'harpoon'.ui:toggle_quick_menu(require'harpoon':list()) end";
+    }
+    {
+      mode = "n";
+      key = "<leader>ma";
+      action.__raw = "function() require'harpoon':list():add() end";
+    }
+    {
+      mode = "n";
+      key = "<leader>mm";
+      action.__raw = "function() require'harpoon':list():select(1) end";
+    }
+    {
+      mode = "n";
+      key = "<leader>mn";
+      action.__raw = "function() require'harpoon':list():select(2) end";
+    }
+    {
+      mode = "n";
+      key = "<leader>me";
+      action.__raw = "function() require'harpoon':list():select(3) end";
+    }
+    {
+      mode = "n";
+      key = "<leader>mi";
+      action.__raw = "function() require'harpoon':list():select(4) end";
+    }
   ];
 }
