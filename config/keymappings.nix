@@ -156,7 +156,7 @@
     #########
     {
       mode = "n";
-      key = "<C-m>";
+      key = "<leader>ml"; # NOTE:: (Neo)vim sees <C-m> as <CR>, so don't use <C-m> here.
       action.__raw = "function() require'harpoon'.ui:toggle_quick_menu(require'harpoon':list()) end";
     }
     {
