@@ -28,8 +28,9 @@
     # Show line and column when searching
     ruler = true;
 
-    # Global substitution by default
-    gdefault = true;
+    # Do no use global substitution by default: If it's the default
+    # "s/X/Y/g" will DEACTIVATE it!
+    gdefault = false;
 
     # Start scrolling when the cursor is X lines away from the top/bottom
     scrolloff = 5;
