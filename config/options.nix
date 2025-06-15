@@ -1,4 +1,7 @@
 {
+  viAlias = true;
+  vimAlias = true;
+
   globalOpts = {
     # Line numbers
     number = true;
