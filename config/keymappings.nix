@@ -144,10 +144,18 @@
       action = "<c-^>";
       options = {remap = false;};
     }
+    # Make "mark" accesible (since "m" is already used as a homerow key)
     {
       mode = ["n"];
       key = "j";
       action = "m";
+      options = {remap = false;};
+    }
+    # Assign "jump to next line in jumplist" to <C-i>
+    {
+      mode = ["n"];
+      key = "<C-i>";
+      action = "<C-I>";
       options = {remap = false;};
     }
 
