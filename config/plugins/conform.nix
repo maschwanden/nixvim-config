@@ -12,7 +12,10 @@
       formatters_by_ft = {
         "_" = ["trim_whitespace"];
         # "*" = ["codespell"];
-        go = ["goimports" "gofumpt"];
+        # Use gofmt instead of gofumpt to prevent from enforcing line length,
+        # since it's getting in the way when coding Go with a 120 char limit.
+        # go = ["goimports" "gofumpt"];
+        go = ["goimports" "gofmt"];
         javascript = [["prettierd" "prettier"]];
         json = ["jq"];
         lua = ["stylua"];
