@@ -162,6 +162,7 @@
     #########
     # Harpoon
     #########
+
     {
       mode = "n";
       key = "<leader>ml"; # NOTE:: (Neo)vim sees <C-m> as <CR>, so don't use <C-m> here.
@@ -191,6 +192,97 @@
       mode = "n";
       key = "<leader>mi";
       action.__raw = "function() require'harpoon':list():select(4) end";
+    }
+
+    ###########
+    # Telescope
+    ###########
+
+    {
+      action = "<cmd>Telescope live_grep<CR>";
+      key = "<leader>ts";
+    }
+    {
+      action = "<cmd>Telescope find_files<CR>";
+      key = "<leader>tf";
+    }
+    {
+      action = "<cmd>Telescope git_commits<CR>";
+      key = "<leader>tc";
+    }
+    {
+      action = "<cmd>Telescope oldfiles<CR>";
+      key = "<leader>th";
+    }
+    {
+      action = "<cmd>Telescope buffers<CR>";
+      key = "<leader>tb";
+    }
+    {
+      action = "<cmd>Telescope colorscheme<CR>";
+      key = "<leader>ch";
+    }
+
+    ############
+    # BufferLine
+    ############
+
+    {
+      mode = "n";
+      key = "<Tab>";
+      action = "<cmd>BufferLineCycleNext<cr>";
+      options = {
+        desc = "Cycle to next buffer";
+      };
+    }
+    {
+      mode = "n";
+      key = "<S-Tab>";
+      action = "<cmd>BufferLineCyclePrev<cr>";
+      options = {
+        desc = "Cycle to previous buffer";
+      };
+    }
+    {
+      mode = "n";
+      key = "<S-n>";
+      action = "<cmd>BufferLineCycleNext<cr>";
+      options = {
+        desc = "Cycle to next buffer";
+      };
+    }
+    {
+      mode = "n";
+      key = "<S-e>";
+      action = "<cmd>BufferLineCyclePrev<cr>";
+      options = {
+        desc = "Cycle to previous buffer";
+      };
+    }
+
+    #
+    # MISC
+    #
+
+    {
+      action = "<cmd>Commentary<CR>";
+      key = "<leader>/";
+    }
+    {
+      mode = "n";
+      key = "<leader>xx";
+      action = "<cmd>Trouble diagnostics<cr>";
+      options = {
+        desc = "Delete buffer";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>bd";
+      action = "<cmd>bdelete<cr>";
+      options = {
+        desc = "Delete buffer";
+      };
     }
   ];
 }
