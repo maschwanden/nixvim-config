@@ -14,6 +14,16 @@
           hash = "sha256-Au05deUPKprlq5cnmuXtREcQF96B3t2r6f6kMS6Uo6w=";
         };
       })
+      (pkgs.vimUtils.buildVimPlugin {
+        pname = "venv-selector.nvim";
+        version = "0.0.5";
+        src = pkgs.fetchFromGitHub {
+          owner = "linux-cultist";
+          repo = "venv-selector.nvim";
+          rev = "regexp";
+          hash = "sha256-ogd4T+mIbb86qFUbDczzDra8yWm/bwKmYCRGYCJz6fM=";
+        };
+      })
     ];
 
   extraConfigLua = ''
@@ -25,6 +35,12 @@
         color_key = "<leader>k",
         cancel_color_key = "<leader>K",
         select_mode = "random",  -- random or loop
+    }
+
+    require('venv-selector').setup {
+      -- Your options go here
+      -- name = "venv",
+      -- auto_refresh = false
     }
   '';
 }
