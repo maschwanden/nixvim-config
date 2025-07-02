@@ -10,6 +10,7 @@
     ./treesitter.nix
     ./copilot-chat.nix
     ./copilot.nix
+    ./keymappings.nix
   ];
 
   plugins = {
@@ -328,7 +329,4 @@
         };
       })
     ];
-
-  keymaps = [
-  ];
 }
