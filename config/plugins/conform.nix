@@ -16,7 +16,7 @@
         # since it's getting in the way when coding Go with a 120 char limit.
         # go = ["goimports" "gofumpt"];
         go = ["goimports" "gofmt"];
-        javascript = [["prettierd" "prettier"]];
+        javascript = ["prettierd" "prettier"];
         json = ["jq"];
         lua = ["stylua"];
         nix = ["alejandra"];
