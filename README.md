@@ -2,7 +2,7 @@
 
 > This repository contains my Neovim configuration, which is declaratively written in Nix.
 
-**Configuring/editting**
+**Configuring/editing**
 
 To start configuring, just add or modify the Nix files in `./config`.
 

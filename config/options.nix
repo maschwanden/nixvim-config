@@ -46,19 +46,4 @@
   };
 
   globals.mapleader = " ";
-
-  # autoCmd = [
-  #   {
-  #     event = [ "BufEnter" "BufWinEnter" ];
-  #     pattern = [ "*.md" "*.mdx" ];
-  #     command = "MarkdownPreviewToggle";
-  #   }
-  # ];
-
-  highlight = {
-    Comment.fg = "#ff00ff";
-    Comment.bg = "#000000";
-    Comment.underline = true;
-    Comment.bold = true;
-  };
 }
