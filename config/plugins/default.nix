@@ -3,17 +3,11 @@
     ./cmp.nix
     ./copilot.nix
     ./keymappings.nix
+    ./lsp.nix
+    ./misc.nix
     ./treesitter.nix
     ./telescope.nix
-    ./lsp.nix
   ];
-
-  plugins = {
-    web-devicons = {
-      enable = true;
-    };
-  };
-
   extraConfigLua = "";
   colorschemes = {};
   extraPlugins = with pkgs.vimPlugins; [];

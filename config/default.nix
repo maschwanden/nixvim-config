@@ -1,9 +1,9 @@
 {
   # Import all your configuration modules here
   imports = [
-    ./options.nix
     ./autocommands.nix
     ./keymappings.nix
+    ./options.nix
     ./plugins
   ];
 
