@@ -1,10 +1,16 @@
 {pkgs, ...}: {
   imports = [
     ./keymappings.nix
+    ./telescope.nix
     ./lsp.nix
   ];
 
-  plugins = {};
+  plugins = {
+    web-devicons = {
+      enable = true;
+    };
+  };
+
   extraConfigLua = "";
   colorschemes = {};
   extraPlugins = with pkgs.vimPlugins; [];
