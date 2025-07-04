@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   imports = [
     ./keymappings.nix
+    ./treesitter.nix
     ./telescope.nix
     ./lsp.nix
   ];
