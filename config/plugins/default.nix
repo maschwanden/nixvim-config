@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   imports = [
     ./keymappings.nix
+    ./lsp.nix
   ];
 
   plugins = {};
