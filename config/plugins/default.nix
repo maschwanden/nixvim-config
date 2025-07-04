@@ -1,5 +1,7 @@
 {pkgs, ...}: {
   imports = [
+    ./cmp.nix
+    ./copilot.nix
     ./keymappings.nix
     ./treesitter.nix
     ./telescope.nix
