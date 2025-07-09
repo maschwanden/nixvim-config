@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   imports = [
     ./cmp.nix
     ./conform.nix
@@ -13,6 +14,6 @@
     ./telescope.nix
   ];
   extraConfigLua = "";
-  colorschemes = {};
-  extraPlugins = with pkgs.vimPlugins; [];
+  colorschemes = { };
+  extraPlugins = with pkgs.vimPlugins; [ ];
 }

@@ -2,57 +2,97 @@
   keymaps = [
     # Basic mappings: "hjkl movements", insert, search, ...
     {
-      mode = ["n" "v"];
+      mode = [
+        "n"
+        "v"
+      ];
       key = "n";
       action = "gj";
-      options = {remap = false;};
+      options = {
+        remap = false;
+      };
     }
     {
-      mode = ["n" "v"];
+      mode = [
+        "n"
+        "v"
+      ];
       key = "e";
       action = "gk";
-      options = {remap = false;};
+      options = {
+        remap = false;
+      };
     }
     {
-      mode = ["n" "v"];
+      mode = [
+        "n"
+        "v"
+      ];
       key = "m";
       action = "h";
-      options = {remap = false;};
+      options = {
+        remap = false;
+      };
     }
     {
-      mode = ["n" "v"];
+      mode = [
+        "n"
+        "v"
+      ];
       key = "i";
       action = "l";
-      options = {remap = false;};
+      options = {
+        remap = false;
+      };
     }
     {
-      mode = ["n" "v"];
+      mode = [
+        "n"
+        "v"
+      ];
       key = "k";
       action = "n";
-      options = {remap = false;};
+      options = {
+        remap = false;
+      };
     }
     {
-      mode = ["n" "v"];
+      mode = [
+        "n"
+        "v"
+      ];
       key = "K";
       action = "N";
-      options = {remap = false;};
+      options = {
+        remap = false;
+      };
     }
     {
-      mode = ["n" "v"];
+      mode = [
+        "n"
+        "v"
+      ];
       key = "h";
       action = "i";
-      options = {remap = false;};
+      options = {
+        remap = false;
+      };
     }
     {
-      mode = ["n" "v"];
+      mode = [
+        "n"
+        "v"
+      ];
       key = "H";
       action = "I";
-      options = {remap = false;};
+      options = {
+        remap = false;
+      };
     }
 
     # Change windows with correct homerow
     {
-      mode = ["n"];
+      mode = [ "n" ];
       key = "<C-w>m";
       action = "<C-w>h";
       options = {
@@ -61,7 +101,7 @@
       };
     }
     {
-      mode = ["n"];
+      mode = [ "n" ];
       key = "<C-w>n";
       action = "<C-w>j";
       options = {
@@ -70,7 +110,7 @@
       };
     }
     {
-      mode = ["n"];
+      mode = [ "n" ];
       key = "<C-w>e";
       action = "<C-w>k";
       options = {
@@ -79,7 +119,7 @@
       };
     }
     {
-      mode = ["n"];
+      mode = [ "n" ];
       key = "<C-w>i";
       action = "<C-w>l";
       options = {
@@ -88,29 +128,32 @@
       };
     }
     {
-      mode = ["n"];
+      mode = [ "n" ];
       key = "<C-w>h";
       action = "<Nop>";
     }
     {
-      mode = ["n"];
+      mode = [ "n" ];
       key = "<C-w>j";
       action = "<Nop>";
     }
     {
-      mode = ["n"];
+      mode = [ "n" ];
       key = "<C-w>k";
       action = "<Nop>";
     }
     {
-      mode = ["n"];
+      mode = [ "n" ];
       key = "<C-w>l";
       action = "<Nop>";
     }
 
     # misc
     {
-      mode = ["n" "v"];
+      mode = [
+        "n"
+        "v"
+      ];
       key = "gl";
       action = "<cmd>lua vim.diagnostic.open_float()<CR>";
       options = {
@@ -119,44 +162,62 @@
       };
     }
     {
-      mode = ["n" "v"];
+      mode = [
+        "n"
+        "v"
+      ];
       key = "<C-n>";
       action = "<C-d>";
-      options = {remap = false;};
+      options = {
+        remap = false;
+      };
     }
     {
-      mode = ["n" "v"];
+      mode = [
+        "n"
+        "v"
+      ];
       key = "<C-e>";
       action = "<C-u>";
-      options = {remap = false;};
+      options = {
+        remap = false;
+      };
     }
     # Replace word under cursor and all other occurrences of the word
     {
-      mode = ["n"];
+      mode = [ "n" ];
       key = "<leader>r";
       action = ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>";
-      options = {remap = false;};
+      options = {
+        remap = false;
+      };
     }
     # Jump to the last opened/focused file
     {
-      mode = ["n"];
+      mode = [ "n" ];
       key = ",,";
       action = "<c-^>";
-      options = {remap = false;};
+      options = {
+        remap = false;
+      };
     }
     # Make "mark" accesible (since "m" is already used as a homerow key)
     {
-      mode = ["n"];
+      mode = [ "n" ];
       key = "j";
       action = "m";
-      options = {remap = false;};
+      options = {
+        remap = false;
+      };
     }
     # Assign "jump to next line in jumplist" to <C-i>
     {
-      mode = ["n"];
+      mode = [ "n" ];
       key = "<C-i>";
       action = "<C-I>";
-      options = {remap = false;};
+      options = {
+        remap = false;
+      };
     }
   ];
 }
