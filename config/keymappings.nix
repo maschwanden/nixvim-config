@@ -219,5 +219,15 @@
         remap = false;
       };
     }
+    # Use <leader>c to close the currenct window
+    {
+      mode = [ "n" ];
+      key = "<leader>c";
+      action = "<C-w>c";
+      options = {
+        desc = "Close current window";
+        remap = false;
+      };
+    }
   ];
 }
