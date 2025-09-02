@@ -10,8 +10,9 @@
     ./keymappings.nix
     ./lsp.nix
     ./misc.nix
-    ./treesitter.nix
     ./telescope.nix
+    ./treesitter.nix
+    ./trouble.nix
   ];
   extraConfigLua = "";
   colorschemes = { };
