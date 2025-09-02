@@ -12,11 +12,9 @@
     ./misc.nix
     ./neo-tree.nix
     ./oil.nix
-    ./treesitter.nix
     ./telescope.nix
     ./treesitter.nix
     ./trouble.nix
-    # ./yazi.nix
   ];
   extraConfigLua = "";
   colorschemes = { };
