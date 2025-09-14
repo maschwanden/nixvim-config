@@ -15,6 +15,7 @@
     ./telescope.nix
     ./treesitter.nix
     ./trouble.nix
+    # ./yazi.nix
   ];
   extraConfigLua = "";
   colorschemes = { };
