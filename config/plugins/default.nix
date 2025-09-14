@@ -11,6 +11,7 @@
     ./lsp.nix
     ./misc.nix
     ./neo-tree.nix
+    ./oil.nix
     ./treesitter.nix
     ./telescope.nix
     ./treesitter.nix
