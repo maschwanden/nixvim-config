@@ -27,26 +27,25 @@
           ...
         }:
         let
-          nixvimWithCopilot = inputs.nixvim.legacyPackages.${system}.makeNixvimWithModule {
-            inherit pkgs;
-            module = import ./config;
-            extraSpecialArgs = {
-              copilot = true;
-            };
-          };
-          nixvimWithoutCopilot = inputs.nixvim.legacyPackages.${system}.makeNixvimWithModule {
+          nixvimMinimal = inputs.nixvim.legacyPackages.${system}.makeNixvimWithModule {
             inherit pkgs;
             module = import ./config;
             extraSpecialArgs = {
               copilot = false;
             };
           };
+          nixvim = inputs.nixvim.legacyPackages.${system}.makeNixvimWithModule {
+            inherit pkgs;
+            module = import ./config;
+            extraSpecialArgs = {
+              copilot = true;
+            };
+          };
         in
         {
           packages = {
-            default = nixvimWithCopilot;
-            withCopilot = nixvimWithCopilot;
-            withoutCopilot = nixvimWithoutCopilot;
+            default = nixvim;
+            minimal = nixvimMinimal;
           };
         };
     };
