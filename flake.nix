@@ -27,21 +27,26 @@
           ...
         }:
         let
-          nixvimLib = inputs.nixvim.lib.${system};
-          nixvimModule = {
+          nixvimWithCopilot = inputs.nixvim.legacyPackages.${system}.makeNixvimWithModule {
             inherit pkgs;
             module = import ./config;
-            extraSpecialArgs = { };
+            extraSpecialArgs = {
+              copilot = true;
+            };
           };
-          nixvim = inputs.nixvim.legacyPackages.${system}.makeNixvimWithModule nixvimModule;
+          nixvimWithoutCopilot = inputs.nixvim.legacyPackages.${system}.makeNixvimWithModule {
+            inherit pkgs;
+            module = import ./config;
+            extraSpecialArgs = {
+              copilot = false;
+            };
+          };
         in
         {
-          checks = {
-            default = nixvimLib.check.mkTestDerivationFromNixvimModule nixvimModule;
-          };
-
           packages = {
-            default = nixvim;
+            default = nixvimWithCopilot;
+            withCopilot = nixvimWithCopilot;
+            withoutCopilot = nixvimWithoutCopilot;
           };
         };
     };

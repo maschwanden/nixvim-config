@@ -1,15 +1,10 @@
+{ lib, config, ... }:
+let
+  cfg = config.plugins.copilot;
+in
 {
   plugins = {
-    copilot-chat = {
-      enable = true;
-    };
-
-    copilot-cmp = {
-      enable = true;
-    };
-
     copilot-lua = {
-      enable = true;
       settings = {
         filetypes = {
           markdown = true;
