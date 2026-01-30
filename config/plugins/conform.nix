@@ -1,4 +1,16 @@
+{ pkgs, ... }:
 {
+  extraPackages = [
+    pkgs.alejandra
+    pkgs.black
+    pkgs.isort
+    pkgs.prettier
+    pkgs.prettierd
+    pkgs.rustfmt
+    pkgs.shfmt
+    pkgs.stylua
+  ];
+
   plugins.conform-nvim = {
     enable = true;
 
