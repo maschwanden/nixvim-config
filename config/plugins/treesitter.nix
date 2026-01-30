@@ -1,4 +1,7 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
+  extraPackages = [ pkgs.tree-sitter ];
+
   plugins.treesitter = {
     enable = true;
 
@@ -35,6 +38,11 @@
         "gitignore"
         "rust"
         "go"
+        "python"
+        "lua"
+        "javascript"
+        "typescript"
+        "bash"
       ];
     };
   };
