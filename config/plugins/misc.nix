@@ -18,6 +18,11 @@
     oil = {
       enable = true;
     };
+
+    # Image preview support
+    image = {
+      enable = true;
+    };
   };
 
   keymaps = [
