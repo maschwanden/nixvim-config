@@ -17,9 +17,13 @@
         '';
       };
 
-      incremental_selection = {enable = true;};
+      incremental_selection = {
+        enable = true;
+      };
 
-      indent = {enable = false;};
+      indent = {
+        enable = false;
+      };
 
       # NOTE: You can set whether `nvim-treesitter` should automatically install the grammars.
       auto_install = true;

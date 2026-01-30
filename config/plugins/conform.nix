@@ -10,19 +10,28 @@
       };
 
       formatters_by_ft = {
-        "_" = ["trim_whitespace"];
+        "_" = [ "trim_whitespace" ];
         # "*" = ["codespell"];
         # Use gofmt instead of gofumpt to prevent from enforcing line length,
         # since it's getting in the way when coding Go with a 120 char limit.
         # go = ["goimports" "gofumpt"];
-        go = ["goimports" "gofmt"];
-        javascript = ["prettierd" "prettier"];
-        json = ["jq"];
-        lua = ["stylua"];
-        nix = ["alejandra"];
-        python = ["isort" "black"];
-        rust = ["rustfmt"];
-        sh = ["shfmt"];
+        go = [
+          "goimports"
+          "gofmt"
+        ];
+        javascript = [
+          "prettierd"
+          "prettier"
+        ];
+        json = [ "jq" ];
+        lua = [ "stylua" ];
+        nix = [ "alejandra" ];
+        python = [
+          "isort"
+          "black"
+        ];
+        rust = [ "rustfmt" ];
+        sh = [ "shfmt" ];
       };
 
       format_on_save = ''
