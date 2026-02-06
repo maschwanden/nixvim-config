@@ -1,0 +1,20 @@
+{lib, ...}: {
+  plugins.vim-dadbod = {
+    enable = true;
+  };
+
+  plugins.vim-dadbod-ui = {
+    enable = true;
+  };
+
+  plugins.vim-dadbod-completion = {
+    enable = true;
+  };
+
+  keymaps = [
+    {
+      action = "<cmd>DBUI<CR>";
+      key = "<leader>d";
+    }
+  ];
+}

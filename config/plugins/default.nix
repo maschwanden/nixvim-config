@@ -3,6 +3,7 @@
     ./cmp.nix
     ./conform.nix
     ./copilot.nix
+    ./dadbod.nix
     ./extra-plugins.nix
     ./fidget.nix
     ./flash.nix
