@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   imports = [
     ./cmp.nix
     ./conform.nix
@@ -16,6 +15,6 @@
     ./trouble.nix
   ];
   extraConfigLua = "";
-  colorschemes = { };
-  extraPlugins = with pkgs.vimPlugins; [ ];
+  colorschemes = {};
+  extraPlugins = with pkgs.vimPlugins; [];
 }
