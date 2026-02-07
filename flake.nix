@@ -9,6 +9,7 @@
 
   outputs =
     {
+      nixpkgs,
       flake-parts,
       ...
     }@inputs:
@@ -19,7 +20,6 @@
         "x86_64-darwin"
         "aarch64-darwin"
       ];
-
       perSystem =
         {
           pkgs,
@@ -27,25 +27,27 @@
           ...
         }:
         let
-          nixvimMinimal = inputs.nixvim.legacyPackages.${system}.makeNixvimWithModule {
+          pkgs = nixpkgs.legacyPackages.${system};
+          lib = import ./lib {
             inherit pkgs;
-            module = import ./config;
-            extraSpecialArgs = {
-              copilot = false;
-            };
+            makeNixvimWithModule = inputs.nixvim.legacyPackages.${system}.makeNixvimWithModule;
           };
-          nixvim = inputs.nixvim.legacyPackages.${system}.makeNixvimWithModule {
-            inherit pkgs;
-            module = import ./config;
-            extraSpecialArgs = {
-              copilot = true;
-            };
+
+          nixvimMinimal = lib.mkNixvim {
+            copilot = false;
+          };
+          nixvimDefault = lib.mkNixvim {
+            copilot = true;
           };
         in
         {
           packages = {
-            default = nixvim;
+            default = nixvimDefault;
             minimal = nixvimMinimal;
+          };
+
+          legacyPackages.lib = {
+            mkNixvim = lib.mkNixvim;
           };
         };
     };
