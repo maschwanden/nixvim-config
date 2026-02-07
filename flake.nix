@@ -9,6 +9,7 @@
 
   outputs =
     {
+      nixpkgs,
       flake-parts,
       ...
     }@inputs:
@@ -27,24 +28,24 @@
           ...
         }:
         let
-          nixvimMinimal = inputs.nixvim.legacyPackages.${system}.makeNixvimWithModule {
+          pkgs = nixpkgs.legacyPackages.${system};
+          lib = import ./lib {
             inherit pkgs;
-            module = import ./config;
-            extraSpecialArgs = {
-              copilot = false;
-            };
+            makeNixvimWithModule = inputs.nixvim.legacyPackages.${system}.makeNixvimWithModule;
           };
-          nixvim = inputs.nixvim.legacyPackages.${system}.makeNixvimWithModule {
-            inherit pkgs;
-            module = import ./config;
-            extraSpecialArgs = {
-              copilot = true;
-            };
+
+          nixvimMinimal = lib.mkNixvim {
+            copilot = false;
+            colorscheme = "nord";
+          };
+          nixvimDefault = lib.mkNixvim {
+            copilot = true;
+            colorscheme = "nord";
           };
         in
         {
           packages = {
-            default = nixvim;
+            default = nixvimDefault;
             minimal = nixvimMinimal;
           };
         };
