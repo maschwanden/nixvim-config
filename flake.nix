@@ -48,6 +48,10 @@
             default = nixvimDefault;
             minimal = nixvimMinimal;
           };
+
+          legacyPackages.lib = {
+            mkNixvim = lib.mkNixvim;
+          };
         };
     };
 }
