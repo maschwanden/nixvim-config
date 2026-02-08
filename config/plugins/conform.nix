@@ -4,6 +4,7 @@
     pkgs.alejandra
     pkgs.black
     pkgs.isort
+    pkgs.gotools
     pkgs.prettier
     pkgs.prettierd
     pkgs.rustfmt
