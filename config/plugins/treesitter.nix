@@ -27,23 +27,6 @@
       indent = {
         enable = false;
       };
-
-      # NOTE: You can set whether `nvim-treesitter` should automatically install the grammars.
-      auto_install = true;
-      ensure_installed = [
-        "git_config"
-        "git_rebase"
-        "gitattributes"
-        "gitcommit"
-        "gitignore"
-        "rust"
-        "go"
-        "python"
-        "lua"
-        "javascript"
-        "typescript"
-        "bash"
-      ];
     };
   };
 }
