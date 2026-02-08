@@ -10,6 +10,7 @@
       keymaps = {
         "g?" = "actions.show_help";
         "<CR>" = "actions.select";
+        "<BS>" = "actions.parent";
         "-" = "actions.parent";
         "_" = "actions.open_cwd";
         "`" = "actions.cd";
@@ -26,5 +27,13 @@
       };
     };
   };
+
+  keymaps = [
+    {
+      mode = "n";
+      action = "<cmd>Oil<CR>";
+      key = "-";
+    }
+  ];
 
 }
