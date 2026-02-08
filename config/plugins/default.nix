@@ -10,7 +10,7 @@
     ./flash.nix
     ./lsp.nix
     ./misc.nix
-    ./neo-tree.nix
+    # ./neo-tree.nix
     ./oil.nix
     ./telescope.nix
     ./treesitter.nix
