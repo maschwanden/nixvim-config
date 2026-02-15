@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   extraPackages = [
-    pkgs.alejandra
+    pkgs.nixfmt
     pkgs.black
     pkgs.isort
     pkgs.gotools
@@ -38,7 +38,7 @@
         ];
         json = [ "jq" ];
         lua = [ "stylua" ];
-        nix = [ "alejandra" ];
+        nix = [ "nixfmt" ];
         python = [
           "isort"
           "black"
