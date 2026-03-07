@@ -1,4 +1,5 @@
-{lib, ...}: {
+{ lib, ... }:
+{
   plugins.vim-dadbod = {
     enable = true;
   };

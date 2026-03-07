@@ -1,4 +1,5 @@
-{self, ...}: {
+{ self, ... }:
+{
   globalOpts = {
     # Line numbers
     number = true;
