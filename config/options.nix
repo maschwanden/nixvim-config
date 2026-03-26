@@ -35,6 +35,17 @@
     scrolloff = 5;
   };
 
+  opts = {
+    # Folding (treesitter-based)
+    foldenable = true;
+    foldmethod = "expr";
+    foldexpr = "v:lua.vim.treesitter.foldexpr()";
+    foldtext = "";
+    foldlevel = 99;
+    foldlevelstart = 99;
+    foldcolumn = "0";
+  };
+
   userCommands = {
     Q.command = "q";
     Q.bang = true;

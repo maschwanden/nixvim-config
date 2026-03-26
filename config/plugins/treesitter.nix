@@ -11,7 +11,7 @@
       textobjects.enable = true;
 
       highlight = {
-        enable = false;
+        enable = true;
 
         disable = ''
           function(lang, bufnr)

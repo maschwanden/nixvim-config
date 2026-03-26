@@ -219,6 +219,32 @@
         remap = false;
       };
     }
+    # Folding
+    {
+      mode = [ "n" ];
+      key = "<leader>zc";
+      action = "zM";
+      options = {
+        desc = "Close all folds";
+      };
+    }
+    {
+      mode = [ "n" ];
+      key = "<leader>zo";
+      action = "zR";
+      options = {
+        desc = "Open all folds";
+      };
+    }
+    {
+      mode = [ "n" ];
+      key = "zz";
+      action = "zA";
+      options = {
+        desc = "Toggle fold recursively";
+      };
+    }
+
     # Use <leader>c to close the currenct window
     {
       mode = [ "n" ];
