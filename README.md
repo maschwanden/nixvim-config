@@ -16,3 +16,15 @@ To test your configuration simply run the following command
 ```sh
 $ nix run .
 ```
+
+**Running remotely**
+
+You can run this Neovim configuration directly from GitHub without cloning the repository:
+
+```sh
+# Default (with Copilot)
+$ nix run github:maschwanden/nixvim-config
+
+# Minimal (without Copilot)
+$ nix run github:maschwanden/nixvim-config#minimal
+```
