@@ -36,6 +36,34 @@
             makeNixvimWithModule = inputs.nixvim.legacyPackages.${system}.makeNixvimWithModule;
           };
 
+          nerdFont = pkgs.nerd-fonts.symbols-only;
+
+          wrapWithFonts =
+            nvim:
+            pkgs.writeShellApplication {
+              name = "nvim";
+              runtimeInputs = [ pkgs.fontconfig ];
+              text = ''
+                if [[ "$(uname)" == "Darwin" ]]; then
+                  FONT_DIR="$HOME/Library/Fonts"
+                else
+                  FONT_DIR="''${XDG_DATA_HOME:-$HOME/.local/share}/fonts"
+                fi
+                MARKER="$FONT_DIR/.nixvim-nerd-fonts-installed"
+
+                if [ ! -f "$MARKER" ]; then
+                  echo "nixvim: Installing Nerd Fonts symbols to $FONT_DIR..."
+                  mkdir -p "$FONT_DIR"
+                  cp -r ${nerdFont}/share/fonts/. "$FONT_DIR/"
+                  fc-cache -f "$FONT_DIR"
+                  touch "$MARKER"
+                  echo "nixvim: Done! Set your terminal's font to 'Symbols Nerd Font' (or enable fallback fonts) for icons."
+                fi
+
+                exec ${nvim}/bin/nvim "$@"
+              '';
+            };
+
           nixvimMinimal = lib.mkNixvim {
             copilot = false;
           };
@@ -45,8 +73,8 @@
         in
         {
           packages = {
-            default = nixvimDefault;
-            minimal = nixvimMinimal;
+            default = wrapWithFonts nixvimDefault;
+            minimal = wrapWithFonts nixvimMinimal;
           };
 
           legacyPackages.lib = {
