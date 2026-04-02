@@ -4,6 +4,8 @@
   ...
 }:
 {
+  version.enableNixpkgsReleaseCheck = false;
+
   # Import all your configuration modules here
   imports = [
     ./autocommands.nix
