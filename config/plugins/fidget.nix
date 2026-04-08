@@ -1,4 +1,3 @@
-{ lib, ... }:
 {
   plugins.fidget = {
     enable = true;

@@ -1,7 +1,3 @@
-{ lib, config, ... }:
-let
-  cfg = config.plugins.copilot;
-in
 {
   plugins = {
     copilot-lua = {
