@@ -10,7 +10,10 @@
       bashls.enable = true; # Bash
       clangd.enable = true; # C/C++
       yamlls.enable = true; # YAML
-      gopls.enable = true; # Golang
+      gopls = {
+        enable = true;
+        package = null; # Use gopls from $PATH (e.g. devshell) instead of a fixed nixpkgs version
+      };
 
       lua_ls = {
         # Lua
