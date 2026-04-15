@@ -3,7 +3,7 @@
   imports = [
     ./cmp.nix
     ./conform.nix
-    ./copilot.nix
+    # ./copilot.nix
     ./dadbod.nix
     ./extra-plugins.nix
     ./fidget.nix
