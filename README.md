@@ -45,6 +45,7 @@ $ nix run github:maschwanden/nixvim-config
 | **Image** | Image preview support |
 | **vim-dadbod** | Database client UI (with vim-dadbod-ui and completion) |
 
+| **which-key** | Popup that displays available keybindings as you type |
 | **nvim-interestingwords** | Highlight words with distinct colors |
 
 ## Hotkeys
