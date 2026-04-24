@@ -121,6 +121,31 @@ $ nix run github:maschwanden/nixvim-config
 | `<leader>gh` | n | File history |
 | `<leader>gq` | n | Close diff view |
 
+The following keybindings are built-in defaults available **inside diffview buffers**:
+
+**Conflict resolution** — the diff view shows LOCAL (ours/left) vs REMOTE (theirs/right):
+
+| Key | Description |
+|-----|-------------|
+| `<leader>co` | Accept OURS (left/local) version of conflict |
+| `<leader>ct` | Accept THEIRS (right/remote) version of conflict |
+| `<leader>cb` | Accept BASE version of conflict |
+| `<leader>ca` | Accept all versions |
+| `dx` | Delete conflict region |
+| `<leader>cO/cT/cB/cA` | Same as above but for the entire file |
+| `]x` / `[x` | Jump to next / previous conflict |
+
+**Navigation & file panel:**
+
+| Key | Description |
+|-----|-------------|
+| `<tab>` / `<s-tab>` | Next / previous file diff |
+| `<leader>b` | Toggle file panel |
+| `g<C-x>` | Cycle through diff layouts |
+| `-` | Stage / unstage entry |
+| `S` / `U` | Stage / unstage all entries |
+| `L` | Open commit log panel |
+
 ### File & Database
 
 | Key | Mode | Description |
