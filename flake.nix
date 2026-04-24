@@ -64,17 +64,11 @@
               '';
             };
 
-          nixvimMinimal = lib.mkNixvim {
-            copilot = false;
-          };
-          nixvimDefault = lib.mkNixvim {
-            copilot = true;
-          };
+          nixvimDefault = lib.mkNixvim { };
         in
         {
           packages = {
             default = wrapWithFonts nixvimDefault;
-            minimal = wrapWithFonts nixvimMinimal;
           };
 
           legacyPackages.lib = {

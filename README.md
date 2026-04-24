@@ -22,9 +22,5 @@ $ nix run .
 You can run this Neovim configuration directly from GitHub without cloning the repository:
 
 ```sh
-# Default (with Copilot)
 $ nix run github:maschwanden/nixvim-config
-
-# Minimal (without Copilot)
-$ nix run github:maschwanden/nixvim-config#minimal
 ```

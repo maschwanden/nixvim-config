@@ -1,6 +1,5 @@
 {
   lib,
-  copilot ? false,
   ...
 }:
 {
@@ -13,12 +12,6 @@
     ./options.nix
     ./plugins
   ];
-
-  plugins = lib.mkIf copilot {
-    copilot-chat.enable = true;
-    copilot-cmp.enable = true;
-    copilot-lua.enable = true;
-  };
 
   colorschemes.catppuccin = {
     enable = true;
