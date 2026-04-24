@@ -19,6 +19,10 @@
           __unkeyed-1 = "<leader>z";
           group = "Folding";
         }
+        {
+          __unkeyed-1 = "<leader>g";
+          group = "Git";
+        }
       ];
     };
   };

@@ -4,6 +4,7 @@
     ./cmp.nix
     ./conform.nix
     ./dadbod.nix
+    ./diffview.nix
     ./extra-plugins.nix
     ./fidget.nix
     ./flash.nix

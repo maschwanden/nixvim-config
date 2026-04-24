@@ -37,6 +37,7 @@ $ nix run github:maschwanden/nixvim-config
 | **Flash** | Fast navigation/jump motions to any visible location |
 | **Trouble** | Diagnostics and quickfix list panel |
 | **Fidget** | LSP progress indicator |
+| **Diffview** | Git diff viewer and file history browser |
 | **Oil** | Lightweight file browser that edits the filesystem like a buffer |
 | **Bufferline** | Buffer/tab bar at the top of the editor |
 | **Lualine** | Status bar at the bottom |
@@ -111,6 +112,14 @@ $ nix run github:maschwanden/nixvim-config
 |-----|------|-------------|
 | `Tab` / `Shift-Tab` | n | Cycle to next / previous buffer |
 | `Shift-n` / `Shift-e` | n | Cycle to next / previous buffer |
+
+### Git (Diffview)
+
+| Key | Mode | Description |
+|-----|------|-------------|
+| `<leader>gd` | n | Open diff view |
+| `<leader>gh` | n | File history |
+| `<leader>gq` | n | Close diff view |
 
 ### File & Database
 
