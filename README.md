@@ -46,6 +46,7 @@ $ nix run github:maschwanden/nixvim-config
 | **Image** | Image preview support |
 | **vim-dadbod** | Database client UI (with vim-dadbod-ui and completion) |
 
+| **Toggleterm** | Integrated terminal with float, horizontal, and vertical layouts |
 | **which-key** | Popup that displays available keybindings as you type |
 | **nvim-interestingwords** | Highlight words with distinct colors |
 
@@ -152,6 +153,18 @@ The following keybindings are built-in defaults available **inside diffview buff
 |-----|------|-------------|
 | `-` | n | Open Oil file browser |
 | `<leader>d` | n | Open database UI (Dadbod) |
+
+### Terminal (Toggleterm)
+
+| Key | Mode | Description |
+|-----|------|-------------|
+| `Ctrl-\` | n, t | Toggle terminal (float) |
+| `<leader>of` | n | Open float terminal |
+| `<leader>oh` | n | Open horizontal terminal |
+| `<leader>ov` | n | Open vertical terminal |
+| `<leader>os` | n | Send current line to terminal |
+| `<leader>os` | v | Send visual selection to terminal |
+| `Esc` | t | Exit terminal mode (to normal mode) |
 
 ### Diagnostics & Highlighting
 

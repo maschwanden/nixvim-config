@@ -14,6 +14,7 @@
     ./oil.nix
     ./telescope.nix
     ./treesitter.nix
+    ./toggleterm.nix
     ./trouble.nix
     ./which-key.nix
   ];

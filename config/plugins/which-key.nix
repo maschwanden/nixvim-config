@@ -23,6 +23,10 @@
           __unkeyed-1 = "<leader>g";
           group = "Git";
         }
+        {
+          __unkeyed-1 = "<leader>o";
+          group = "Terminal";
+        }
       ];
     };
   };
