@@ -41,6 +41,14 @@
       };
     }
 
+    # Open terminal in default mode (floating)
+    {
+      mode = "n";
+      key = "<leader>/";
+      action = "<cmd>ToggleTerm direction=float<CR>";
+      options.desc = "Float terminal";
+    }
+
     # Open specific terminal directions
     {
       mode = "n";
