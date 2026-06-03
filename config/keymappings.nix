@@ -72,6 +72,30 @@
         "n"
         "v"
       ];
+      key = "<C-k>";
+      action = "nzz";
+      options = {
+        remap = false;
+        desc = "Search next and center";
+      };
+    }
+    {
+      mode = [
+        "n"
+        "v"
+      ];
+      key = "<C-K>";
+      action = "Nzz";
+      options = {
+        remap = false;
+        desc = "Search previous and center";
+      };
+    }
+    {
+      mode = [
+        "n"
+        "v"
+      ];
       key = "h";
       action = "i";
       options = {
