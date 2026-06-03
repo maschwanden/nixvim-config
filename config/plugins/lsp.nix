@@ -3,6 +3,11 @@
     enable = true;
     servers = {
       html.enable = true; # HTML
+      ts_ls.enable = true; # TypeScript / JavaScript
+      cssls.enable = true; # CSS / SCSS / LESS
+      angularls.enable = true; # Angular
+      eslint.enable = true; # JS / TS linting
+      emmet_ls.enable = true; # HTML / CSS abbreviation expansion
       pyright.enable = true; # Python
       marksman.enable = true; # Markdown
       nil_ls.enable = true; # Nix

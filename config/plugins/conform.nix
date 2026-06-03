@@ -32,7 +32,23 @@
           "goimports"
           "gofmt"
         ];
+        css = [
+          "prettierd"
+          "prettier"
+        ];
+        scss = [
+          "prettierd"
+          "prettier"
+        ];
+        html = [
+          "prettierd"
+          "prettier"
+        ];
         javascript = [
+          "prettierd"
+          "prettier"
+        ];
+        typescript = [
           "prettierd"
           "prettier"
         ];
