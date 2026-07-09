@@ -8,6 +8,7 @@
     ./extra-plugins.nix
     ./fidget.nix
     ./flash.nix
+    ./jupyter.nix
     ./lsp.nix
     ./misc.nix
     # ./neo-tree.nix

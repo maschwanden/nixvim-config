@@ -27,6 +27,10 @@
           __unkeyed-1 = "<leader>o";
           group = "Terminal";
         }
+        {
+          __unkeyed-1 = "<leader>s";
+          group = "Send/REPL";
+        }
       ];
     };
   };
