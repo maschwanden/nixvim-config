@@ -31,6 +31,12 @@
           __unkeyed-1 = "<leader>s";
           group = "Send/REPL";
         }
+        # Additional iron.nvim cell-execution chord (mirrors <leader>sc).
+        {
+          __unkeyed-1 = "<C-CR>";
+          desc = "Run cell & advance (REPL)";
+          mode = "n";
+        }
       ];
     };
   };

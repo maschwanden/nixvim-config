@@ -4,6 +4,7 @@
   # and run cells in an IPython REPL split (iron.nvim). Minimal and terminal-native —
   # no remote-plugin manifest, no kitty graphics protocol required. Plots open in a
   # matplotlib window (the ipython startup file sets the TkAgg backend).
+
   plugins = {
     jupytext = {
       enable = true;
@@ -80,4 +81,17 @@
       };
     };
   };
+
+  # Extra Jupyter-style shortcut: <C-CR> mirrors <leader>sc (run current `# %%`
+  # cell and advance). iron only allows one key per action, so this additional
+  # binding lives here rather than in iron's own keymaps. (Ctrl+Enter needs a
+  # terminal that emits a distinct code for it, e.g. kitty.)
+  keymaps = [
+    {
+      mode = "n";
+      key = "<C-CR>";
+      action.__raw = ''function() require("iron.core").send_code_block(true) end'';
+      options.desc = "Run current cell and advance";
+    }
+  ];
 }
