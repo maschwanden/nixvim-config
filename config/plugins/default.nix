@@ -8,10 +8,10 @@
     ./extra-plugins.nix
     ./fidget.nix
     ./flash.nix
+    ./grug-far.nix
     ./jupyter.nix
     ./lsp.nix
     ./misc.nix
-    # ./neo-tree.nix
     ./oil.nix
     ./telescope.nix
     ./treesitter.nix

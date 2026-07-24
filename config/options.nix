@@ -56,5 +56,8 @@
     W.bang = true;
   };
 
-  globals.mapleader = " ";
+  globals = {
+    mapleader = " ";
+    maplocalleader = ",";
+  };
 }
