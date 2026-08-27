@@ -8,6 +8,7 @@
     ./extra-plugins.nix
     ./fidget.nix
     ./flash.nix
+    ./gitsigns.nix
     ./grug-far.nix
     ./jupyter.nix
     ./lsp.nix
