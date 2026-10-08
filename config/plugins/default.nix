@@ -14,6 +14,7 @@
     ./lsp.nix
     ./misc.nix
     ./oil.nix
+    ./session.nix
     ./telescope.nix
     ./treesitter.nix
     ./toggleterm.nix

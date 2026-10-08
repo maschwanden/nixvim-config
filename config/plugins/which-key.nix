@@ -31,6 +31,10 @@
           __unkeyed-1 = "<leader>s";
           group = "Send/REPL";
         }
+        {
+          __unkeyed-1 = "<leader>q";
+          group = "Session";
+        }
         # Additional iron.nvim cell-execution chord (mirrors <leader>sc).
         {
           __unkeyed-1 = "<C-CR>";
