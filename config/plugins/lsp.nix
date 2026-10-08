@@ -55,4 +55,45 @@
       };
     };
   };
+
+  userCommands = {
+    RustAnalyzerReload = {
+      desc = "Reload the rust-analyzer workspace and rebuild proc macros";
+      force = true;
+      command.__raw = ''
+        function()
+          local clients = vim.lsp.get_clients({ name = "rust_analyzer" })
+          if #clients == 0 then
+            vim.notify("rust_analyzer is not attached to any buffer", vim.log.levels.WARN)
+            return
+          end
+          for _, client in ipairs(clients) do
+            client:request("rust-analyzer/reloadWorkspace", nil, function(err)
+              if err then
+                vim.notify("rust-analyzer: reloadWorkspace failed: " .. tostring(err.message), vim.log.levels.ERROR)
+              else
+                vim.notify("rust-analyzer: workspace reloaded")
+              end
+            end)
+            client:request("rust-analyzer/rebuildProcMacros", nil, function() end)
+          end
+        end
+      '';
+    };
+  };
+
+  keymaps = [
+    {
+      mode = "n";
+      key = "<leader>lw";
+      action = "<cmd>RustAnalyzerReload<CR>";
+      options.desc = "Reload rust-analyzer workspace";
+    }
+    {
+      mode = "n";
+      key = "<leader>lR";
+      action = "<cmd>LspRestart<CR>";
+      options.desc = "Restart the attached LSP server(s)";
+    }
+  ];
 }
