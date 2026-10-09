@@ -12,6 +12,10 @@
     pkgs.stylua
   ];
 
+  # Neovim's bundled rust.vim no longer detects the rustfmt version by default
+  # and then falls back to the removed `--write-mode` flag for :RustFmt.
+  globals.rustfmt_emit_files = 1;
+
   plugins.conform-nvim = {
     enable = true;
 
